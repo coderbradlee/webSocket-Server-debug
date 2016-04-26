@@ -80,7 +80,7 @@ int main() {
 {
 	//test wss
 	WssClient client("localhost:8081/upload", false);
-    client.onmessage = [&client](shared_ptr<WsClient::Message> message) {
+    client.onmessage = [&client](shared_ptr<WssClient::Message> message) {
 			stringstream data_ss;
 			data_ss << message->data.rdbuf();
 			cout << "Client: Message received: \"" << data_ss.str() << "\"" << endl;
