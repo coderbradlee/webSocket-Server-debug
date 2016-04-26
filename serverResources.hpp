@@ -502,9 +502,9 @@ void serverResourceUploads(WssServer& server, string url)
 	};
 
 	websocket.onopen = [&server](shared_ptr<WssServer::Connection> connection) {
-		cout << "upload Server: Opened connection " << (size_t)connection.get() << endl;
+		cout << "wss server: Opened connection " << (size_t)connection.get() << endl;
 		//************************************************
-		BOOST_LOG_SEV(server.slg, notification) << "upload Server: Opened connection " << (size_t)connection.get();
+		BOOST_LOG_SEV(server.slg, notification) << "wss server: Opened connection " << (size_t)connection.get();
 		server.initsink->flush();
 		//************************************************
 	};
@@ -513,18 +513,18 @@ void serverResourceUploads(WssServer& server, string url)
 	websocket.onclose = [&server](shared_ptr<WssServer::Connection> connection, int status, const string& reason) {
 		finish_uploads((size_t)connection.get());
 
-		cout << "upload Server: Closed connection " << (size_t)connection.get() << " with status code:" << status <<",reason:"<<reason<< endl;
+		cout << "wss server: Closed connection " << (size_t)connection.get() << " with status code:" << status <<",reason:"<<reason<< endl;
 		//************************************************
-		BOOST_LOG_SEV(server.slg, notification) << "upload Server: Closed connection " << (size_t)connection.get() <<" with status code : " << status <<",reason : "<<reason;
+		BOOST_LOG_SEV(server.slg, notification) << "wss server: Closed connection " << (size_t)connection.get() <<" with status code : " << status <<",reason : "<<reason;
 		server.initsink->flush();
 		//************************************************
 	};
 
 	websocket.onerror = [&server](shared_ptr<WssServer::Connection> connection, const boost::system::error_code& ec) {
-		cout << "upload Server: Error in connection " << (size_t)connection.get() << ". " <<
+		cout << "wss server: Error in connection " << (size_t)connection.get() << ". " <<
 			"Error: " << ec << ", error message: " << ec.message() << endl;
 		//************************************************
-		BOOST_LOG_SEV(server.slg, error) << "upload Server: Error in connection " << (size_t)connection.get() << ". " <<
+		BOOST_LOG_SEV(server.slg, error) << "wss server: Error in connection " << (size_t)connection.get() << ". " <<
 			"Error: " << ec << ", error message: " << ec.message();
 		server.initsink->flush();
 		//************************************************
