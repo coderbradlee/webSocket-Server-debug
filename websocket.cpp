@@ -90,7 +90,7 @@ int main() {
 			ptree pt;
 			read_json(data_ss, pt);
 			string phase = pt.get<string>("phase");
-			if (phase.compare("2") == 0)
+			if (phase.compare("TRANSFER") == 0)
 			{
 				cout << "Client: Sending close connection" << endl;
 				client.send_close(1000);
