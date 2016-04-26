@@ -183,9 +183,9 @@ void server_send_datas(WssServer& server, shared_ptr<WssServer::Connection> conn
 }
 void server_sends(WssServer& server, shared_ptr<WssServer::Connection> connection, string retString, string action)
 {
-	cout << action << " Server: Sending message \"" << retString << "\" to " << (size_t)connection.get() << endl;
+	cout << action << "wss Server: Sending message \"" << retString << "\" to " << (size_t)connection.get() << endl;
 	//************************************************
-	BOOST_LOG_SEV(server.slg, notification) << action << " Server: Sending message \"" << retString << "\" to " << (size_t)connection.get();
+	BOOST_LOG_SEV(server.slg, notification) << action << "wss Server: Sending message \"" << retString << "\" to " << (size_t)connection.get();
 	server.initsink->flush();
 	//************************************************
 	server_send_datas(server, connection, retString, action);
