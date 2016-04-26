@@ -84,13 +84,13 @@ int main() {
 			stringstream data_ss;
 			data_ss << message->data.rdbuf();
 			cout << "Client: Message received: \"" << data_ss.str() << "\"" << endl;
-			cout << "Client: Sending close connection" << endl;
-			client.send_close(1000);
+			// cout << "Client: Sending close connection" << endl;
+			// client.send_close(1000);
 
-			/*ptree pt;
+			ptree pt;
 			read_json(data_ss, pt);
 			string phase = pt.get<string>("phase");
-			if (phase.compare("TRANSFER") == 0)
+			if (phase.compare("2") == 0)
 			{
 				cout << "Client: Sending close connection" << endl;
 				client.send_close(1000);
@@ -102,7 +102,7 @@ int main() {
 				sss << "sffafasfdaf";
 				cout << "Client: Sending message: \"" << sss.str() << "\"" << endl;
 				client.send(sss);
-			}*/
+			}
 			
 
 			
