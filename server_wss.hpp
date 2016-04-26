@@ -31,7 +31,7 @@ namespace SimpleWeb {
             //Shared_ptr is used to pass temporary objects to the asynchronous functions
             std::shared_ptr<Connection> connection(new Connection(new WSS(asio_io_service, context)));
             
-            acceptor.async_accept(connection->socket->lowest_layer(), [this, connection](const boost::system::error_code& ec) {
+            asio_acceptor.async_accept(connection->socket->lowest_layer(), [this, connection](const boost::system::error_code& ec) {
                 //Immediately start accepting a new connection
                 accept();
 
