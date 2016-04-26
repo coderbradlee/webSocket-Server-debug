@@ -68,10 +68,10 @@ int main() {
 		serverResourceUploads(servers, upload_url);
 		serverResourceRenames(servers, rename_url);
 		serverResourceDeletes(servers, delete_url);
-		serverResourceLists(server, list_url);
-		thread server_threads([&server](){
+		serverResourceLists(servers, list_url);
+		thread server_threads([&servers](){
 			//Start WS-server
-			server.start();
+			servers.start();
 		});
 		this_thread::sleep_for(chrono::seconds(1));
 
