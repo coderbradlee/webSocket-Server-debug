@@ -80,36 +80,65 @@ int main() {
 {
 	//test wss
 	WssClient client("localhost:8081/upload", false);
-    client.onmessage=[&client](shared_ptr<WssClient::Message> message) {
-        auto message_str=message->string();
-        
-        cout << "Client: Message received: \"" << message_str << "\"" << endl;
-        
-        cout << "Client: Sending close connection" << endl;
-        client.send_close(1000);
-    };
-    
-    client.onopen=[&client]() {
-        cout << "Client: Opened connection" << endl;
-        
-        string message="Hello";
-        cout << "Client: Sending message: \"" << message << "\"" << endl;
+    client.onmessage = [&client](shared_ptr<WsClient::Message> message) {
+			stringstream data_ss;
+			data_ss << message->data.rdbuf();
+			cout << "Client: Message received: \"" << data_ss.str() << "\"" << endl;
+			cout << "Client: Sending close connection" << endl;
+			client.send_close(1000);
 
-        auto send_stream=make_shared<WssClient::SendStream>();
-        *send_stream << message;
-        client.send(send_stream);
-    };
-    
-    client.onclose=[](int status, const string& reason) {
-        cout << "Client: Closed connection with status code " << status << endl;
-    };
-    
-    //See http://www.boost.org/doc/libs/1_55_0/doc/html/boost_asio/reference.html, Error Codes for error code meanings
-    client.onerror=[](const boost::system::error_code& ec) {
-        cout << "Client: Error: " << ec << ", error message: " << ec.message() << endl;
-    };
-    
-    client.start();
+			/*ptree pt;
+			read_json(data_ss, pt);
+			string phase = pt.get<string>("phase");
+			if (phase.compare("TRANSFER") == 0)
+			{
+				cout << "Client: Sending close connection" << endl;
+				client.send_close(1000);
+			}
+			else
+			{
+				stringstream sss;
+			
+				sss << "sffafasfdaf";
+				cout << "Client: Sending message: \"" << sss.str() << "\"" << endl;
+				client.send(sss);
+			}*/
+			
+
+			
+
+			
+		};
+
+		client.onopen = [&client]() {
+			cout << __LINE__<<" Client: Opened connection" << endl;
+
+			stringstream ss;
+			
+			ss << "#PREPARE#{\
+				\"action\": \"UPLOAD_FILE\",\
+				\"transfer\" : \"base64\",\
+				\"data\" : {\
+				\"file\":\"/1/test.pdf\",\
+				\"size\" : 11,\
+				\"overwrite\" : true},\
+			    \"ts\" : \"2015 - 07 - 31 08 : 00 : 00\"}";
+			
+			cout << "Client: Sending message: \"" << ss.str() << "\"" << endl;
+			client.send(ss);
+			
+		};
+
+		client.onclose = [](int status, const string& reason) {
+			cout << "Client: Closed connection with status code " << status << endl;
+		};
+
+		//See http://www.boost.org/doc/libs/1_55_0/doc/html/boost_asio/reference.html, Error Codes for error code meanings
+		client.onerror = [](const boost::system::error_code& ec) {
+			cout << "Client: Error: " << ec << ", error message: " << ec.message() << endl;
+		};
+
+		client.start();
 }
 
 
