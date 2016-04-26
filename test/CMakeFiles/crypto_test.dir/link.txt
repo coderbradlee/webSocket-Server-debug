@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++1y -O3 -Wno-deprecated-declarations    CMakeFiles/crypto_test.dir/crypto_test.cpp.o  -o crypto_test -rdynamic -lcrypto 

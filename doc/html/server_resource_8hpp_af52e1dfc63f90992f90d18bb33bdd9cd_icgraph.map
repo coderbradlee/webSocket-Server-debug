@@ -1,0 +1,8 @@
+<map id="server_send_data" name="server_send_data">
+<area shape="rect" id="node2" href="$server_resource_8hpp.html#ac7794f5598b3be9fbc9e3d245e4484d0" title="server_send" alt="" coords="176,56,267,83"/>
+<area shape="rect" id="node3" href="$server_resource_8hpp.html#aef3842c8c58989f00f425160e257a7e6" title="serverResourceUpload" alt="" coords="319,5,469,32"/>
+<area shape="rect" id="node5" href="$server_resource_8hpp.html#a1d2d790c95649b095fa0f1ba69291208" title="serverResourceRename" alt="" coords="315,56,473,83"/>
+<area shape="rect" id="node6" href="$server_resource_8hpp.html#aa3d53c979e52cc54f184754c870bc4ab" title="serverResourceDelete" alt="" coords="320,107,468,133"/>
+<area shape="rect" id="node7" href="$server_resource_8hpp.html#a49049a185430a7f6637ddfd3a7e58d42" title="serverResourceList" alt="" coords="328,157,460,184"/>
+<area shape="rect" id="node4" href="$websocket_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="521,81,572,108"/>
+</map>

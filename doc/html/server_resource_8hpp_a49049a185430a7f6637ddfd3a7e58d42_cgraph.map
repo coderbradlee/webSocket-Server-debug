@@ -1,0 +1,7 @@
+<map id="serverResourceList" name="serverResourceList">
+<area shape="rect" id="node2" href="$server_resource_8hpp.html#aa1cda579d65be6d60305a1fc8735043c" title="listfile" alt="" coords="207,5,261,32"/>
+<area shape="rect" id="node3" href="$server_resource_8hpp.html#ac7794f5598b3be9fbc9e3d245e4484d0" title="server_send" alt="" coords="189,56,279,83"/>
+<area shape="rect" id="node6" href="$server_resource_8hpp.html#a59ee46a0fce262f9fc363fc13400f4b7" title="finish_upload" alt="" coords="185,107,283,133"/>
+<area shape="rect" id="node4" href="$server_resource_8hpp.html#af52e1dfc63f90992f90d18bb33bdd9cd" title="server_send_data" alt="" coords="331,56,453,83"/>
+<area shape="rect" id="node5" href="$class_simple_web_1_1_socket_server_base.html#a9854539a44256d50033ed4ade84e6650" title="SimpleWeb::SocketServerBase\l::send" alt="" coords="501,49,705,90"/>
+</map>

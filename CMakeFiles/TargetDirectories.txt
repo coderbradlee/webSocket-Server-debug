@@ -1,0 +1,4 @@
+/root/webSocket-Server/test/CMakeFiles/crypto_test.dir
+/root/webSocket-Server/test/CMakeFiles/parse_test.dir
+/root/webSocket-Server/CMakeFiles/ws_examples.dir
+/root/webSocket-Server/CMakeFiles/wss_examples.dir

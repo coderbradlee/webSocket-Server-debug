@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$class_socket_server_test.html#a8bc44143f39926d6e089eb3f9a551924" title="SocketServerTest::parse\l_request_test" alt="" coords="119,5,283,47"/>
+<area shape="rect" id="node3" href="$class_socket_client_test.html#a5ee6df5e62b2fab86b083b33688a5f23" title="SocketClientTest::constructor\l_parse_test1" alt="" coords="104,71,299,112"/>
+<area shape="rect" id="node4" href="$class_socket_client_test.html#ab1fdee900cc9f656571804f4d3632a68" title="SocketClientTest::constructor\l_parse_test2" alt="" coords="104,136,299,177"/>
+<area shape="rect" id="node5" href="$class_socket_client_test.html#a55ce923e6f4b1f84e9f97fba4fe13832" title="SocketClientTest::constructor\l_parse_test3" alt="" coords="104,201,299,243"/>
+<area shape="rect" id="node6" href="$class_socket_client_test.html#ac16efbe458802c0e49a54050f7030fed" title="SocketClientTest::constructor\l_parse_test4" alt="" coords="104,267,299,308"/>
+<area shape="rect" id="node7" href="$class_socket_client_test.html#ad37e38a1eb03093a41dbe03f823e2f5e" title="SocketClientTest::parse\l_response_header_test" alt="" coords="121,332,282,373"/>
+</map>

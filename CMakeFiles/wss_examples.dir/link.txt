@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++1y -O3 -Wno-deprecated-declarations    CMakeFiles/wss_examples.dir/wss_examples.cpp.o  -o wss_examples -rdynamic /usr/local/lib/libboost_system.so -lcrypto -lssl -lpthread -Wl,-rpath,/usr/local/lib 

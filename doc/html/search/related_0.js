@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['socketclient_3c_20socket_5ftype_20_3e',['SocketClient&lt; socket_type &gt;',['../class_simple_web_1_1_socket_client_base_1_1_connection.html#a5d2441fca2f732cc96c2d8368401cc65',1,'SimpleWeb::SocketClientBase::Connection']]],
+  ['socketclientbase_3c_20socket_5ftype_20_3e',['SocketClientBase&lt; socket_type &gt;',['../class_simple_web_1_1_socket_client_base_1_1_connection.html#a49f87a7d9043f3b351cad1f8243b2844',1,'SimpleWeb::SocketClientBase::Connection::SocketClientBase&lt; socket_type &gt;()'],['../class_simple_web_1_1_socket_client_base_1_1_message.html#a49f87a7d9043f3b351cad1f8243b2844',1,'SimpleWeb::SocketClientBase::Message::SocketClientBase&lt; socket_type &gt;()']]],
+  ['socketserver_3c_20socket_5ftype_20_3e',['SocketServer&lt; socket_type &gt;',['../class_simple_web_1_1_socket_server_base_1_1_connection.html#a1b2d5d6b0a8c9c64a5dcf088fb39f20b',1,'SimpleWeb::SocketServerBase::Connection']]],
+  ['socketserverbase_3c_20socket_5ftype_20_3e',['SocketServerBase&lt; socket_type &gt;',['../class_simple_web_1_1_socket_server_base_1_1_connection.html#aa7aa67168a863fc97584b01550d53e9b',1,'SimpleWeb::SocketServerBase::Connection::SocketServerBase&lt; socket_type &gt;()'],['../class_simple_web_1_1_socket_server_base_1_1_message.html#aa7aa67168a863fc97584b01550d53e9b',1,'SimpleWeb::SocketServerBase::Message::SocketServerBase&lt; socket_type &gt;()'],['../class_simple_web_1_1_socket_server_base_1_1_endpoint.html#aa7aa67168a863fc97584b01550d53e9b',1,'SimpleWeb::SocketServerBase::Endpoint::SocketServerBase&lt; socket_type &gt;()']]]
+];

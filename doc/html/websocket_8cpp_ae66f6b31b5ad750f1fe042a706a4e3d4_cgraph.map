@@ -1,0 +1,23 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$server_resource_8hpp.html#a7369da3037f5f4ecdf37902875304cbb" title="create_dir" alt="" coords="167,107,245,133"/>
+<area shape="rect" id="node3" href="$server_resource_8hpp.html#aef3842c8c58989f00f425160e257a7e6" title="serverResourceUpload" alt="" coords="131,157,281,184"/>
+<area shape="rect" id="node12" href="$server_resource_8hpp.html#a1d2d790c95649b095fa0f1ba69291208" title="serverResourceRename" alt="" coords="127,208,285,235"/>
+<area shape="rect" id="node14" href="$server_resource_8hpp.html#aa3d53c979e52cc54f184754c870bc4ab" title="serverResourceDelete" alt="" coords="132,259,280,285"/>
+<area shape="rect" id="node17" href="$server_resource_8hpp.html#a49049a185430a7f6637ddfd3a7e58d42" title="serverResourceList" alt="" coords="140,309,272,336"/>
+<area shape="rect" id="node19" href="$class_simple_web_1_1_socket_server_base.html#aea9f5e14dba399008c8a8912cddfbbeb" title="SimpleWeb::SocketServerBase\l::start" alt="" coords="104,361,308,402"/>
+<area shape="rect" id="node20" href="$class_simple_web_1_1_socket_client_base.html#a106e07a1a09219713df38cc73cea8c57" title="SimpleWeb::SocketClientBase\l::send_close" alt="" coords="105,426,307,467"/>
+<area shape="rect" id="node21" href="$class_simple_web_1_1_socket_client_base.html#ab0b9d9f189648bdcfdfbf2ba731fa4e6" title="SimpleWeb::SocketClientBase\l::send" alt="" coords="105,491,307,533"/>
+<area shape="rect" id="node22" href="$class_simple_web_1_1_socket_client_base.html#aa0fbc776768ce8afc4233d6507a438d1" title="SimpleWeb::SocketClientBase\l::start" alt="" coords="105,557,307,598"/>
+<area shape="rect" id="node4" href="$server_resource_8hpp.html#adb08c255fd6084bdf3bcd57bafb49e54" title="uploads_init" alt="" coords="366,56,457,83"/>
+<area shape="rect" id="node5" href="$server_resource_8hpp.html#ac7794f5598b3be9fbc9e3d245e4484d0" title="server_send" alt="" coords="366,309,457,336"/>
+<area shape="rect" id="node6" href="$server_resource_8hpp.html#af52e1dfc63f90992f90d18bb33bdd9cd" title="server_send_data" alt="" coords="519,233,642,260"/>
+<area shape="rect" id="node8" href="$base64_8cpp.html#aa4626c0f72d21b14565930f2fdf27961" title="Base64Decode" alt="" coords="356,107,467,133"/>
+<area shape="rect" id="node10" href="$server_resource_8hpp.html#ac7666ba5722adb3c2c012a7cd9d2633d" title="write_data" alt="" coords="371,5,452,32"/>
+<area shape="rect" id="node11" href="$server_resource_8hpp.html#a59ee46a0fce262f9fc363fc13400f4b7" title="finish_upload" alt="" coords="363,259,460,285"/>
+<area shape="rect" id="node7" href="$class_simple_web_1_1_socket_server_base.html#a9854539a44256d50033ed4ade84e6650" title="SimpleWeb::SocketServerBase\l::send" alt="" coords="695,226,899,267"/>
+<area shape="rect" id="node9" href="$modp__b64_8cc.html#a483b21a7c20fea90f6df739078ebf0a6" title="modp_b64_decode" alt="" coords="515,107,646,133"/>
+<area shape="rect" id="node13" href="$server_resource_8hpp.html#a41c28dc9dda32cdbc78cc1440c49ea5d" title="rename_file" alt="" coords="367,208,455,235"/>
+<area shape="rect" id="node15" href="$server_resource_8hpp.html#ac4e94ed04e64a8af47c262cc7ad4ce59" title="delete_file" alt="" coords="371,360,451,387"/>
+<area shape="rect" id="node16" href="$server_resource_8hpp.html#abe2d3ab92d64ffd78ad245c5029c29bb" title="directory_is_empty" alt="" coords="515,360,647,387"/>
+<area shape="rect" id="node18" href="$server_resource_8hpp.html#aa1cda579d65be6d60305a1fc8735043c" title="listfile" alt="" coords="384,411,439,437"/>
+</map>

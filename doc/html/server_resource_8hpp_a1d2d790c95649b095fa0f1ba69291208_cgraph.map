@@ -1,0 +1,7 @@
+<map id="serverResourceRename" name="serverResourceRename">
+<area shape="rect" id="node2" href="$server_resource_8hpp.html#a41c28dc9dda32cdbc78cc1440c49ea5d" title="rename_file" alt="" coords="217,5,305,32"/>
+<area shape="rect" id="node3" href="$server_resource_8hpp.html#ac7794f5598b3be9fbc9e3d245e4484d0" title="server_send" alt="" coords="215,56,306,83"/>
+<area shape="rect" id="node6" href="$server_resource_8hpp.html#a59ee46a0fce262f9fc363fc13400f4b7" title="finish_upload" alt="" coords="212,107,309,133"/>
+<area shape="rect" id="node4" href="$server_resource_8hpp.html#af52e1dfc63f90992f90d18bb33bdd9cd" title="server_send_data" alt="" coords="357,56,480,83"/>
+<area shape="rect" id="node5" href="$class_simple_web_1_1_socket_server_base.html#a9854539a44256d50033ed4ade84e6650" title="SimpleWeb::SocketServerBase\l::send" alt="" coords="528,49,732,90"/>
+</map>

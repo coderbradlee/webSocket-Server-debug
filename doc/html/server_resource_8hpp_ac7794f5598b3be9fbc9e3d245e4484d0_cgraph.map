@@ -1,0 +1,4 @@
+<map id="server_send" name="server_send">
+<area shape="rect" id="node2" href="$server_resource_8hpp.html#af52e1dfc63f90992f90d18bb33bdd9cd" title="server_send_data" alt="" coords="144,13,267,39"/>
+<area shape="rect" id="node3" href="$class_simple_web_1_1_socket_server_base.html#a9854539a44256d50033ed4ade84e6650" title="SimpleWeb::SocketServerBase\l::send" alt="" coords="315,5,519,47"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="SimpleWeb::Crypto::Base64::encode" name="SimpleWeb::Crypto::Base64::encode">
+<area shape="rect" id="node2" href="$class_simple_web_1_1_socket_client_base.html#a601337dc00b8b0219c608e4e6e5438cb" title="SimpleWeb::SocketClientBase\l\&lt; WS \&gt;::handshake" alt="" coords="197,5,399,47"/>
+<area shape="rect" id="node3" href="$namespace_simple_web_1_1_crypto_1_1_base64.html#a31416636e1ffcaecd034877687b98ca6" title="SimpleWeb::Crypto::\lBase64::encode" alt="" coords="227,71,369,112"/>
+<area shape="rect" id="node4" href="$class_simple_web_1_1_socket_server_base.html#ac76020a103417ee397f7687b2255ff58" title="SimpleWeb::SocketServerBase\l\&lt; WS \&gt;::generate_handshake" alt="" coords="196,136,400,177"/>
+<area shape="rect" id="node5" href="$crypto__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="273,202,323,229"/>
+</map>

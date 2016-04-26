@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/webSocket-Server/test/crypto_test.cpp
+iostream
+-
+sstream
+-
+vector
+-
+utility
+-
+iomanip
+-
+crypto.hpp
+/root/webSocket-Server/test/crypto.hpp
+
+crypto.hpp
+string
+-
+cmath
+-
+openssl/evp.h
+-
+openssl/buffer.h
+-
+openssl/sha.h
+-
+openssl/md5.h
+-
+

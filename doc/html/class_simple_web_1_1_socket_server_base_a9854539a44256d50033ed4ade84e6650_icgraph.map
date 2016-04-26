@@ -1,0 +1,9 @@
+<map id="SimpleWeb::SocketServerBase::send" name="SimpleWeb::SocketServerBase::send">
+<area shape="rect" id="node2" href="$server_resource_8hpp.html#af52e1dfc63f90992f90d18bb33bdd9cd" title="server_send_data" alt="" coords="257,31,380,57"/>
+<area shape="rect" id="node3" href="$server_resource_8hpp.html#ac7794f5598b3be9fbc9e3d245e4484d0" title="server_send" alt="" coords="428,56,519,83"/>
+<area shape="rect" id="node4" href="$server_resource_8hpp.html#aef3842c8c58989f00f425160e257a7e6" title="serverResourceUpload" alt="" coords="571,5,721,32"/>
+<area shape="rect" id="node6" href="$server_resource_8hpp.html#a1d2d790c95649b095fa0f1ba69291208" title="serverResourceRename" alt="" coords="567,56,725,83"/>
+<area shape="rect" id="node7" href="$server_resource_8hpp.html#aa3d53c979e52cc54f184754c870bc4ab" title="serverResourceDelete" alt="" coords="572,107,720,133"/>
+<area shape="rect" id="node8" href="$server_resource_8hpp.html#a49049a185430a7f6637ddfd3a7e58d42" title="serverResourceList" alt="" coords="580,157,712,184"/>
+<area shape="rect" id="node5" href="$websocket_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="773,81,824,108"/>
+</map>

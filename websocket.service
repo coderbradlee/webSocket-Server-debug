@@ -1,0 +1,15 @@
+[Unit]
+Description=nfs upload server
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=simple
+ExecStart=/home/websocket/webSocket-Server-debug/websocket
+Environment="XDG_RUNTIME_DIR=/home/websocket/webSocket-Server-debug/"
+WorkingDirectory=/home/websocket/webSocket-Server-debug/
+PrivateTmp=true
+Restart=on-failure
+RestartSec=10
+User=websocket
+[Install]
+WantedBy=multi-user.target

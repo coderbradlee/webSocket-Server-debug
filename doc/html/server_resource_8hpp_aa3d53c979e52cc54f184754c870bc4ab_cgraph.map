@@ -1,0 +1,8 @@
+<map id="serverResourceDelete" name="serverResourceDelete">
+<area shape="rect" id="node2" href="$server_resource_8hpp.html#ac4e94ed04e64a8af47c262cc7ad4ce59" title="delete_file" alt="" coords="210,5,290,32"/>
+<area shape="rect" id="node4" href="$server_resource_8hpp.html#ac7794f5598b3be9fbc9e3d245e4484d0" title="server_send" alt="" coords="205,56,295,83"/>
+<area shape="rect" id="node7" href="$server_resource_8hpp.html#a59ee46a0fce262f9fc363fc13400f4b7" title="finish_upload" alt="" coords="201,107,299,133"/>
+<area shape="rect" id="node3" href="$server_resource_8hpp.html#abe2d3ab92d64ffd78ad245c5029c29bb" title="directory_is_empty" alt="" coords="347,5,479,32"/>
+<area shape="rect" id="node5" href="$server_resource_8hpp.html#af52e1dfc63f90992f90d18bb33bdd9cd" title="server_send_data" alt="" coords="351,56,474,83"/>
+<area shape="rect" id="node6" href="$class_simple_web_1_1_socket_server_base.html#a9854539a44256d50033ed4ade84e6650" title="SimpleWeb::SocketServerBase\l::send" alt="" coords="527,49,731,90"/>
+</map>

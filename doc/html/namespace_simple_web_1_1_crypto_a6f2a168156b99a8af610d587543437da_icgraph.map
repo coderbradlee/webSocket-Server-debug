@@ -1,0 +1,6 @@
+<map id="SimpleWeb::Crypto::SHA1" name="SimpleWeb::Crypto::SHA1">
+<area shape="rect" id="node2" href="$class_simple_web_1_1_socket_client_base.html#a601337dc00b8b0219c608e4e6e5438cb" title="SimpleWeb::SocketClientBase\l\&lt; WS \&gt;::handshake" alt="" coords="232,5,433,47"/>
+<area shape="rect" id="node3" href="$namespace_simple_web_1_1_crypto.html#ae9b9b34fa0b5acc896a9095d33f8e8c5" title="SimpleWeb::Crypto::SHA1" alt="" coords="244,71,421,98"/>
+<area shape="rect" id="node4" href="$class_simple_web_1_1_socket_server_base.html#ac76020a103417ee397f7687b2255ff58" title="SimpleWeb::SocketServerBase\l\&lt; WS \&gt;::generate_handshake" alt="" coords="231,123,435,164"/>
+<area shape="rect" id="node5" href="$crypto__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="307,189,358,215"/>
+</map>
