@@ -1,6 +1,7 @@
 all:websocket
 
-CXXFLAGS ?= -std=c++11 -g -O3 -L. -L/usr/local/lib -L. -lcrypto -lboost_program_options -lboost_filesystem -lboost_coroutine -lboost_system -lboost_thread -lpthread -lboost_context -lboost_date_time -lboost_log_setup -lboost_log -lssl -DBOOST_ASIO_ENABLE_HANDLER_TRACKING
+CXXFLAGS ?= -std=c++11 -g -O3 -L. -L/usr/local/lib -L. -lcrypto -lboost_program_options -lboost_filesystem -lboost_coroutine -lboost_system -lboost_thread -lpthread -lboost_context -lboost_date_time -lboost_log_setup -lboost_log -lssl
+
 daemon:websocketDaemon
 
 websocketDaemon: websocket.cpp base64.cpp modp_base64/modp_b64.cc renesolalog.cpp
