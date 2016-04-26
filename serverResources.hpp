@@ -30,15 +30,15 @@ using namespace boost::posix_time;
 namespace fs = boost::filesystem;
 typedef SimpleWeb::SocketServer<SimpleWeb::WSS> WssServer;
 typedef SimpleWeb::SocketClient<SimpleWeb::WSS> WssClient;
-map<size_t, FileUpload> uploads;
-string nfspath = "";
-std::mutex conLock_;
-std::mutex directory_is_empty_lock;
+map<size_t, FileUpload> uploadss;
+string nfspaths = "";
+std::mutex conLock_s;
+std::mutex directory_is_empty_locks;
 bool create_dirs(std::string dir)
 {
 	try
 	{
-		std::unique_lock<std::mutex> locker(conLock_);
+		std::unique_lock<std::mutex> locker(conLock_s);
 		return boost::filesystem::create_directories(dir);
 	}
 	catch (std::exception& e)
@@ -54,14 +54,14 @@ bool create_dirs(std::string dir)
 }
 string uploads_inits(size_t userid, string filename, int size, bool bin = false)
 {
-	std::unique_lock<std::mutex> locker(conLock_);
+	std::unique_lock<std::mutex> locker(conLock_s);
 	//uploadsinit((size_t)connection.get(),filename,size,true);
 	string retString;
 	ptime now = second_clock::local_time();
 	string now_str = to_iso_extended_string(now.date()) + " " + to_simple_string(now.time_of_day());
 	try
 	{
-		string path = nfspath+ filename;
+		string path = nfspaths+ filename;
 		
 		fs::path p(path);
 		p.remove_filename();
@@ -74,7 +74,7 @@ string uploads_inits(size_t userid, string filename, int size, bool bin = false)
 				return retString;
 			}
 		}
-		auto ret = uploads.insert(make_pair(userid, FileUpload(path, size, bin)));
+		auto ret = uploadss.insert(make_pair(userid, FileUpload(path, size, bin)));
 		if (ret.second)
 		{
 			cout << "map insert succeeded" << endl;
@@ -98,16 +98,16 @@ string uploads_inits(size_t userid, string filename, int size, bool bin = false)
 }
 string write_datas(size_t userid, string data)
 {
-	std::unique_lock<std::mutex> locker(conLock_);
+	std::unique_lock<std::mutex> locker(conLock_s);
 	//write_data((size_t)connection.get(),output_str);
 	string retString;
 	ptime now = second_clock::local_time();
 	string now_str = to_iso_extended_string(now.date()) + " " + to_simple_string(now.time_of_day());
 	try
 	{
-		//uploads[userid].addData(data);
-		auto iter = uploads.find(userid);
-		if (iter != uploads.end())
+		//uploadss[userid].addData(data);
+		auto iter = uploadss.find(userid);
+		if (iter != uploadss.end())
 		{
 			//cout << iter->second << endl;
 			iter->second.addData(data);
@@ -134,12 +134,12 @@ string write_datas(size_t userid, string data)
 }
 void finish_uploads(size_t userid)
 {
-	std::unique_lock<std::mutex> locker(conLock_);
-	auto iter = uploads.find(userid);
-	if (iter != uploads.end())
+	std::unique_lock<std::mutex> locker(conLock_s);
+	auto iter = uploadss.find(userid);
+	if (iter != uploadss.end())
 	{
 		iter->second.close();
-		uploads.erase(userid);
+		uploadss.erase(userid);
 	}
 	//cout << "double free" << endl;
 }
@@ -194,18 +194,18 @@ void server_sends(WssServer& server, shared_ptr<WssServer::Connection> connectio
 
 string rename_files(string data_oldFile, string data_newFile)
 {
-	std::unique_lock<std::mutex> locker(conLock_);
-	//uploadsinit((size_t)connection.get(),filename,size,true);
+	std::unique_lock<std::mutex> locker(conLock_s);
+	//uploadssinit((size_t)connection.get(),filename,size,true);
 	string retString;
 	ptime now = second_clock::local_time();
 	string now_str = to_iso_extended_string(now.date()) + " " + to_simple_string(now.time_of_day());
 
 	try
 	{
-		/*cout << nfspath + data_oldFile << endl;
-		cout << nfspath + data_newFile << endl;*/
-		fs::path oldpath(nfspath + data_oldFile);
-		fs::path newpath(nfspath + data_newFile);
+		/*cout << nfspaths + data_oldFile << endl;
+		cout << nfspaths + data_newFile << endl;*/
+		fs::path oldpath(nfspaths + data_oldFile);
+		fs::path newpath(nfspaths + data_newFile);
 		fs::rename(oldpath, newpath);
 		
 		cout << "rename success" << endl;
@@ -228,7 +228,7 @@ string rename_files(string data_oldFile, string data_newFile)
 }
 bool directory_is_emptys(fs::path p)
 {
-	std::unique_lock<std::mutex> locker(directory_is_empty_lock);
+	std::unique_lock<std::mutex> locker(directory_is_empty_locks);
 	//cout << "directory_is_empty" << endl;
 	try
 	{
@@ -300,7 +300,7 @@ bool directory_is_emptys(fs::path p)
 }
 bool delete_files(string file,bool delete_empty)
 {
-	std::unique_lock<std::mutex> locker(conLock_);
+	std::unique_lock<std::mutex> locker(conLock_s);
 	
 	try
 	{
@@ -339,7 +339,7 @@ bool delete_files(string file,bool delete_empty)
 
 void listfiles(ptree& listfiletree, string path)
 {
-	std::unique_lock<std::mutex> locker(directory_is_empty_lock);
+	std::unique_lock<std::mutex> locker(directory_is_empty_locks);
 	//cout << "directory_is_empty" << endl;
 	//ptree filetree;
 	try
@@ -434,7 +434,7 @@ void serverResourceUploads(WssServer& server, string url)
 				}
 				else
 				{
-					fs::path p(nfspath+file);
+					fs::path p(nfspaths+file);
 					if (fs::exists(p))
 					{
 						retString = "{\"action\":\"UPLOAD_FILE\",\"errorCode\": -9001,\"message\":\"file exist\",\"phase\":\"PREPARE\",\"ts\":\"" + now_str + "\"}";
@@ -667,7 +667,7 @@ void serverResourceDeletes(WssServer& server, string url)
 				for (ptree::iterator it = pdata_files.begin(); it != pdata_files.end(); ++it)
 				{
 					string file = it->second.get<string>("file");
-					if (delete_files(nfspath + file, pdata_deleteDir))
+					if (delete_files(nfspaths + file, pdata_deleteDir))
 						count++;
 				}
 				
@@ -785,7 +785,7 @@ void serverResourceLists(WssServer& server, string url)
 				{
 					ptree listfiletree;
 					string type = it->second.get<string>("type");
-					listfiles(listfiletree, nfspath+"/"+storagePath+"/"+type);
+					listfiles(listfiletree, nfspaths+"/"+storagePath+"/"+type);
 					pinfiles.add_child(type, listfiletree);
 				}
 				datachidren.add_child("files", pinfiles);
