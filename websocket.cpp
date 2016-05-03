@@ -29,6 +29,7 @@ int main() {
 			delete_url = "^/" + pt.get<std::string>("webserver.delete_url") + "/?$";
 			list_url = "^/" + pt.get<std::string>("webserver.list_url") + "/?$";
 			nfspath = pt.get<std::string>("nfs.path");
+			nfspaths = pt.get<std::string>("nfs.path");
 		}
 
 		cout << port << endl;;
